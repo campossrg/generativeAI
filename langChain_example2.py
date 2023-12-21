@@ -2,7 +2,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import ResponseSchema
 from langchain.output_parsers import StructuredOutputParser
-import initialize_properties
+import properties
 
 customer_review = """\
 This leaf blower is pretty amazing.  It has four settings:\
@@ -40,7 +40,7 @@ prompt_template = ChatPromptTemplate.from_template(review_template)
 print(prompt_template)
 
 messages = prompt_template.format_messages(text=customer_review)
-chat = ChatOpenAI(temperature=0.0, model=initialize_properties.llm_model, api_key=initialize_properties.api_key)
+chat = ChatOpenAI(temperature=0.0, model=properties.llm_model, api_key=properties.api_key)
 response = chat(messages)
 print(response.content)
 

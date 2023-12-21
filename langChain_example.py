@@ -1,8 +1,8 @@
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
-import initialize_properties
+import properties
 
-chat = ChatOpenAI(temperature=0.0, model=initialize_properties.llm_model, api_key=initialize_properties.api_key)
+chat = ChatOpenAI(temperature=0.0, model=properties.llm_model, api_key=properties.api_key)
 
 template_string = """Translate the text \
 that is delimited by triple backticks \

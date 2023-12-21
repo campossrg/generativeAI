@@ -1,8 +1,8 @@
 from openai import OpenAI
-import initialize_properties
+import properties
 
 client = OpenAI(
-    api_key=initialize_properties.api_key
+    api_key=properties.api_key
 )
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
