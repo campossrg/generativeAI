@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Print commit done') {
+            steps {
+                echo 'Hello, a commit has been done!'
+            }
+        }
+    }
+}
