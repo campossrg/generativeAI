@@ -12,7 +12,7 @@ from datetime import date
 print("Starting...")
 print(wikipedia.__file__)
 
-llm = ChatOpenAI(temperature=0, model=properties.llm_model, api_key=properties.api_key)
+llm = ChatOpenAI(temperature=0, model=.llm_model, api_key=properties.api_key)
 
 tools = load_tools(["llm-math","wikipedia"], llm=llm)
 

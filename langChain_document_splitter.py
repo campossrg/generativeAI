@@ -10,7 +10,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTex
 from langchain.document_loaders import NotionDirectoryLoader
 from langchain.text_splitter import MarkdownHeaderTextSplitter
 
-#openai.api_key  = os.environ['OPENAI_API_KEY']
+openai.api_key  = os.getenv('OPENAI_API_KEY')
 
 some_text = """When writing documents, writers will use document structure to group content. \
 This can convey to the reader, which idea's are related. For example, closely related ideas \
